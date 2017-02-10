@@ -6,6 +6,9 @@
     <title>Maksym's blog</title>
 </head>
 <body>
+    {% if user.is_authenticated %}
+    <a href="{% url 'post_new' %}">Add post</a>
+    {% endif %}
     <h1>Django Blog</h1>
 
     {% block content %}
